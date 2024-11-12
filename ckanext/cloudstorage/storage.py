@@ -341,7 +341,7 @@ class ResourceCloudStorage(CloudStorage):
             return self.driver.get_object_cdn_url(obj)
         except NotImplementedError:
             if 'S3' in self.driver_name:
-                return urlparse.urljoin(
+                return urljoin(
                     'https://' + self.driver.connection.host,
                     '{container}/{path}'.format(
                         container=self.container_name,
