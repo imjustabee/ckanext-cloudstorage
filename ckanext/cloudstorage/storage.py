@@ -3,7 +3,7 @@
 import cgi
 import mimetypes
 import os.path
-import urlparse
+from urllib.parse import urljoin
 from ast import literal_eval
 from datetime import datetime, timedelta
 from tempfile import SpooledTemporaryFile
